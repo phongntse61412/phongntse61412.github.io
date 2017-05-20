@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <style>
+        .btn {
+            background: #3498db;
+            border-radius: 0px;
+            font-family: Arial;
+            color: #ffffff;
+            font-size: 12px;
+            padding: 2px 2px 2px 2px;
+            text-decoration: none;
+            height: 30px;
+            width: 70px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .btn.active {
+            background: #cecece;
+            text-decoration: none;
+        }
+        </style>
+    </head>
+    <body>
+        <button class="btn">Button</button>
+        <button class="btn">Button</button>
+        <button class="btn">Button</button>
+        <button class="btn">Button</button>
+    </body>
+    <script>
+        function toggleActiveState() {
+            this.classList.toggle('active');
+        }
+        var btns = document.querySelectorAll('.btn');
+        [].forEach.call(btns, function(btn) {
+          btn.addEventListener('click', toggleActiveState, false);
+        });
+    </script>
+</html>
